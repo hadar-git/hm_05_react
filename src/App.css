@@ -182,3 +182,10 @@
     border-right-color: var(--border);
   }
 }
+
+/* רצועה כהה מאחורי הנקודות, כדי שיראו אותן גם על תמונות בהירות */
+.carousel .carousel-dots {
+  bottom: 0;
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.45);
+}

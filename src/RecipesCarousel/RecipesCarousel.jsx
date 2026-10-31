@@ -28,7 +28,11 @@ export default function RecipesCarousel() {
         
       }
     loadImages()
-     return () => controller.abort();       
+         
+     return () => {
+        controller.abort()
+    }
+   
     }, [])
    if (loading)
      return <div className='carousel-message'>טוען...</div>

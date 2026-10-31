@@ -1,13 +1,10 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 import Carousel from "./Carousel/Carousel";
 import RecipesCarousel from './RecipesCarousel/RecipesCarousel'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showRecipes, setShowRecipes] = useState(true)
 
 
 const images = [
@@ -23,7 +20,8 @@ const images = [
   return (
     <>
       <Carousel images={images} intervalSeconds={3} />
-      <RecipesCarousel/>
+      <button onClick={()=> setShowRecipes(!showRecipes)}>הצג/הסתר</button>
+     {showRecipes && <RecipesCarousel/> } 
     </>
   )
 }

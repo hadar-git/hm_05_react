@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Carousel from "./Carousel/Carousel";
+import RecipesCarousel from './RecipesCarousel/RecipesCarousel'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ const images = [
   return (
     <>
       <Carousel images={images} intervalSeconds={3} />
+      <RecipesCarousel/>
     </>
   )
 }

@@ -15,11 +15,11 @@ export default function Carousel({ images, intervalSeconds = 3 }) {
    const timer =  setInterval(() => {
     move(1)
    }, intervalSeconds*1000);
- 
+
     return () => {
       clearInterval(timer )
     }
-  }, [intervalSeconds, images.length])
+  }, [intervalSeconds, selected])
   
   return (
     <div className="carousel">
